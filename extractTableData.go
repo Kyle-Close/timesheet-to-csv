@@ -7,10 +7,10 @@ import (
 )
 
 type RowData struct {
-	Name  string
-	Link  string
-	Note  string
-	Hours float32
+	Name  string  `csv:"name"`
+	Hours float32 `csv:"hours"`
+	Link  string  `csv:"link"`
+	Note  string  `csv:"note"`
 }
 
 func ExtractTableData(tableSlice []string) []RowData {
@@ -48,7 +48,7 @@ func ExtractTableData(tableSlice []string) []RowData {
 		end = strings.IndexRune(link, ')')
 
 		if start != -1 && end != -1 {
-			link = link[start+1 : end-1]
+			link = link[start+1 : end]
 		}
 
 		row := RowData{

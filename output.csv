@@ -1,0 +1,30 @@
+name,link,note,hours
+Digi-Key Corporation – PO,https://conexiom.atlassian.net/browse/IQ-34300,,0.5
+RUBIX Group - FR - Orexad,https://conexiom.atlassian.net/browse/IQ-34188,,0.5
+Graybar – PO,https://conexiom.atlassian.net/browse/IQ-34331,,0.25
+Digi-Key Corporation – PO,https://conexiom.atlassian.net/browse/IQ-34340,,0.25
+Graybar - Pricing,https://conexiom.atlassian.net/browse/IQ-34100,Complex graybar pricing request. Logic was all being done in pre-proc. Customer sends in a huge text file that needs to be parsed and added to an xref table. The format of their input text file changed needing update to logic,1.75
+Parker EMEA - Benelux,https://conexiom.atlassian.net/browse/IQ-34207,,0.5
+Sherwin-Williams - EMEA - INV,https://conexiom.atlassian.net/browse/IQ-34256,,0.5
+Digi-Key Corporation – PO,https://conexiom.atlassian.net/browse/IQ-34290,,0.5
+Digi-Key Corporation – PO,https://conexiom.atlassian.net/browse/IQ-34301,,0.5
+Digi-Key Corporation – PO,https://conexiom.atlassian.net/browse/IQ-34313,,0.5
+Sherwin-Williams - EMEA - INV,https://conexiom.atlassian.net/browse/IQ-34206,,0.75
+Sherwin-Williams - EMEA - INV,https://conexiom.atlassian.net/browse/IQ-34366,Customer wanted us to use custom logic for numeric group/decimal separator variation. Seemed doable since there was specific criteria for each format that would be consistent. Did it but had some trouble along the way.,1.5
+
+
+name,link,note,hours
+Group A Bi-Weekly Meeting,,,1
+Digi-Key Corporation – PO,https://conexiom.atlassian.net/browse/IQ-33936,,0.25
+Digi-Key Corporation – PO,https://conexiom.atlassian.net/browse/IQ-33938,,0.5
+Digi-Key Corporation – PO,https://conexiom.atlassian.net/browse/IQ-33943,,0.5
+Digi-Key Corporation – PO,https://conexiom.atlassian.net/browse/IQ-33943,,0.75
+Parker EMEA - Benelux,https://conexiom.atlassian.net/browse/IQ-33892,,0.5
+Pfizer - Australia (PO),https://conexiom.atlassian.net/browse/IQ-33576,FPM that was a bit more complicated than usual. Involved splitting every line and some custom field logic.,1.5
+Exceptions,,,1
+RUBIX Group - DE - Zitec,https://conexiom.atlassian.net/browse/IQ-33930,,0.5
+Graybar – PO,https://conexiom.atlassian.net/browse/IQ-34158,,0.5
+Graybar - Tax REVIEW,https://conexiom.visualstudio.com/Mapping/_git/Mapping/pullrequest/20807,,0.25
+Honeywell - PMT (Bucharest),https://conexiom.atlassian.net/browse/IQ-33964,,0.75
+
+
