@@ -16,7 +16,7 @@ func ExtractTable(data []byte) []string {
 	startIndex := math.MaxInt
 
 	for index, value := range lines {
-		if strings.Contains(strings.ToUpper(value), "HOURS") && strings.Contains(strings.ToUpper(value), "NAME") {
+		if isHeaderLine(value) {
 			startIndex = index + 2
 		}
 
@@ -30,4 +30,16 @@ func ExtractTable(data []byte) []string {
 	}
 
 	return tableSlice
+}
+
+func isHeaderLine(line string) bool {
+	headerVals := [4]string{"HOURS", "NAME", "LINK", "NOTES"}
+
+	for _, v := range headerVals {
+		if !strings.Contains(strings.ToUpper(line), v) {
+			return false
+		}
+	}
+
+	return true
 }
