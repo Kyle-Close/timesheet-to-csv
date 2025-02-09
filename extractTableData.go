@@ -9,11 +9,12 @@ import (
 type RowData struct {
 	Name  string  `csv:"name"`
 	Hours float32 `csv:"hours"`
+	Date  string  `csv:"date"`
 	Link  string  `csv:"link"`
 	Note  string  `csv:"note"`
 }
 
-func ExtractTableData(tableSlice []string) []RowData {
+func ExtractTableData(tableSlice []string, date string) []RowData {
 	rowsData := make([]RowData, 0, 50)
 
 	for _, v := range tableSlice {
@@ -54,6 +55,7 @@ func ExtractTableData(tableSlice []string) []RowData {
 		row := RowData{
 			Hours: float32(hours),
 			Name:  name,
+			Date:  date,
 			Link:  link,
 			Note:  note,
 		}

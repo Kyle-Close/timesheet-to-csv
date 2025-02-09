@@ -1,16 +1,20 @@
-name,hours,link,note
-Sherwin-Williams - EMEA - INV,0.75,https://conexiom.atlassian.net/browse/IQ-33360,
-Sherwin-Williams - EMEA - INV,0.5,https://conexiom.atlassian.net/browse/IQ-33391,
-Digi-Key Corporation – PO,0.5,https://conexiom.atlassian.net/browse/IQ-33367,
-Digi-Key Corporation – PO,0.25,https://conexiom.atlassian.net/browse/IQ-33394,
-Digi-Key Corporation - Demand FC,0.75,https://conexiom.atlassian.net/browse/IQ-33437,
-Sherwin-Williams - EMEA - INV,0.5,https://conexiom.atlassian.net/browse/IQ-33441,
-Digi-Key Corporation – PO,0.5,https://conexiom.atlassian.net/browse/IQ-33368,Had several discussions with Martin and Ace and help desk regarding this ticket. Probably need to change the process for this but I've let the team leads know so they are aware.\
-W.W. Grainger Inc,1.25,https://conexiom.atlassian.net/browse/IQ-33544,Had some trouble figuring out why the predata was messed up on this request. Implemented fix to catch filenames even if pdf is scanned.
-Digi-Key Corporation – PO,0.5,https://conexiom.atlassian.net/browse/IQ-33522,
-Digi-Key Corporation - Demand FC,0.5,https://conexiom.atlassian.net/browse/IQ-33542,
-RUBIX Group - FR - Orexad,0.5,https://conexiom.atlassian.net/browse/IQ-33431,
-Digi-Key Corporation – PO,1,https://conexiom.atlassian.net/browse/IQ-33454,Complex ship to lookup logic implementation
-Sherwin-Williams - EMEA - INV,0.5,https://conexiom.atlassian.net/browse/IQ-33573,
+name,hours,date,link,note
+W.W. Grainger Inc,0.5,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43219,
+Sherwin-Williams - EMEA - INV,0.25,2025-01-20,https://conexiom.atlassian.net/browse/CD-7158,
+W.W. Grainger Inc,0.25,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43224,
+Graybar – PO,0.5,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43231,
+Graybar – PO,0.25,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43239,
+Digi-Key Corporation – PO,0.5,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43114,
+PR Review - Workato,0.25,2025-01-20,https://dev.azure.com/conexiom/Mapping/_git/Workato/pullrequest/21619,
+Parker EMEA - DACH,0.75,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43089,
+Honeywell - SPS (API - BRP2),0.75,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43090,
+Diversey - Istanbul,0.75,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43097,
+W.W. Grainger Inc,0.25,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43111,
+W.W. Grainger Inc,0.5,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43125,
+RUBIX Group - NL,0.5,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43145,
+Honeywell - SPS (API - Sperian),0.25,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43121,
+Resideo,0.5,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43131,
+Pfizer - Saudi Arabia (PO),0.75,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43148,
+RUBIX Group - DE - Zitec,0.5,2025-01-20,https://conexiom.atlassian.net/browse/IQ-43163,
 
 
