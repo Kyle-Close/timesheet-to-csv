@@ -10,14 +10,15 @@ import (
 )
 
 func main() {
-	if len(os.Args) <= 1 {
-		log.Fatal("Too few arguments.")
-	}
+	// Get the time (starting sunday) that we want to create the CSV for
+	selectedWeek := getWeekSelection()
 
+	// Get the csv files for that week
+	paths := createPathList(selectedWeek)
 	file := CreateCSV()
 
-	for i := 1; i < len(os.Args); i++ {
-		data := OpenFile(os.Args[i])
+	for i := 0; i < len(paths); i++ {
+		data := OpenFile(paths[i])
 
 		// Grab the date from the file
 		re := regexp.MustCompile(`\d{4}-\d{2}-\d{2}`)

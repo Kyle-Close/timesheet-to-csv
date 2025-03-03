@@ -2,36 +2,39 @@ package main
 
 import (
 	"log"
+	"reflect"
 	"strconv"
 	"strings"
 )
 
 type RowData struct {
-	Name  string  `csv:"name"`
-	Hours float32 `csv:"hours"`
-	Date  string  `csv:"date"`
-	Link  string  `csv:"link"`
-	Note  string  `csv:"note"`
+	Hours        float32 `csv:"hours"`
+	Name         string  `csv:"name"`
+	TaskCategory string  `csv:"taskCategory"`
+	Date         string  `csv:"date"`
+	Link         string  `csv:"link"`
+	Note         string  `csv:"note"`
 }
 
 func ExtractTableData(tableSlice []string, date string) []RowData {
 	rowsData := make([]RowData, 0, 50)
 
 	for _, v := range tableSlice {
-		parts := strings.Split(strings.TrimSpace(v), "|")
-		if len(parts) < 5 {
+		columns := strings.Split(strings.TrimSpace(v), "|")
+
+		if len(columns) < getStructFieldCount[RowData]() {
 			log.Fatal("Table has malformed data.")
 		}
 
 		// find index of start and end to grab number
-		start := strings.IndexRune(parts[1], ':')
-		end := strings.IndexRune(parts[1], ')')
+		start := strings.IndexRune(columns[1], ':')
+		end := strings.IndexRune(columns[1], ')')
 
 		if start == -1 || end == -1 {
 			continue
 		}
 
-		hoursStr := strings.TrimSpace(parts[1][start+3 : end])
+		hoursStr := strings.TrimSpace(columns[1][start+3 : end])
 		if hoursStr == "" {
 			continue
 		}
@@ -40,9 +43,11 @@ func ExtractTableData(tableSlice []string, date string) []RowData {
 		if err != nil {
 			continue
 		}
-		name := strings.TrimSpace(parts[2])
-		link := strings.TrimSpace(parts[3])
-		note := strings.TrimSpace(parts[4])
+
+		name := strings.TrimSpace(columns[2])
+		taskCategory := strings.TrimSpace(columns[3])
+		link := strings.TrimSpace(columns[4])
+		note := strings.TrimSpace(columns[5])
 
 		// Grab just the link not the full markdown [](link)
 		start = strings.IndexRune(link, '(')
@@ -53,15 +58,20 @@ func ExtractTableData(tableSlice []string, date string) []RowData {
 		}
 
 		row := RowData{
-			Hours: float32(hours),
-			Name:  name,
-			Date:  date,
-			Link:  link,
-			Note:  note,
+			Hours:        float32(hours),
+			Name:         name,
+			TaskCategory: taskCategory,
+			Date:         date,
+			Link:         link,
+			Note:         note,
 		}
 
 		rowsData = append(rowsData, row)
 	}
 
 	return rowsData
+}
+
+func getStructFieldCount[T any]() int {
+	return reflect.TypeOf((*T)(nil)).Elem().NumField()
 }
