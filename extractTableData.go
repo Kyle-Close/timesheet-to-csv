@@ -3,6 +3,7 @@ package main
 import (
 	"log"
 	"reflect"
+	"regexp"
 	"strconv"
 	"strings"
 )
@@ -62,7 +63,7 @@ func ExtractTableData(tableSlice []string, date string) []RowData {
 			Name:         name,
 			TaskCategory: taskCategory,
 			Date:         date,
-			Link:         link,
+			Link:         extractTicketNumber(link),
 			Note:         note,
 		}
 
@@ -74,4 +75,10 @@ func ExtractTableData(tableSlice []string, date string) []RowData {
 
 func getStructFieldCount[T any]() int {
 	return reflect.TypeOf((*T)(nil)).Elem().NumField()
+}
+
+func extractTicketNumber(input string) string {
+	re := regexp.MustCompile(`\b[A-Z]{2}-\d+\b`)
+	match := re.FindString(input)
+	return match
 }

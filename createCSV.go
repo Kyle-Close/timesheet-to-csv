@@ -3,10 +3,17 @@ package main
 import (
 	"log"
 	"os"
+	"path/filepath"
 )
 
 func CreateCSV() *os.File {
-	file, err := os.Create("/home/kyle/Documents/timesheet-output.csv")
+	homeDir, err := os.UserHomeDir()
+	if err != nil {
+		log.Fatal(err.Error())
+	}
+
+	filePath := filepath.Join(homeDir, "Documents", "timesheet-output.csv")
+	file, err := os.Create(filePath)
 	if err != nil {
 		log.Fatal(err.Error())
 	}
